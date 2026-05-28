@@ -118,7 +118,27 @@ Allowed `coordinatePrecision` values:
 - `town-or-region`
 - `hidden-unmapped`
 
-## Tiny next ship
+## Tonight build list — 2026-05-28
+
+### 1. Email forwarding
+
+Set up the simplest useful email path:
+
+```text
+hello@thesurflog.com → Jeff's inbox
+```
+
+Recommended first path: Cloudflare Email Routing. Do not add a paid mailbox unless Jeff asks for send-as/custom mailbox behavior.
+
+Acceptance criteria:
+
+- `hello@thesurflog.com` exists as an inbound route.
+- Test message reaches Jeff.
+- Site submit CTA points to `hello@thesurflog.com` if the local form is not yet backed by real storage.
+
+### 2. Map + data expansion
+
+Build the next product-feel pass:
 
 1. Add `lat/lng/coordinatePrecision` to existing records where obvious/public.
 2. Add 15–25 Mexico/Hawaii/international records with approximate public coordinates and source URLs.
@@ -126,6 +146,16 @@ Allowed `coordinatePrecision` values:
 4. Verify list filters still work.
 5. Verify localStorage state updates both cards and map pins.
 6. Push as one focused GitHub-visible commit.
+
+### 3. Product path sketch
+
+Add a short product note for future account/trip-planner features:
+
+- V1 remains no-account/local-first.
+- Account should be optional and appear as “Save my log” only after someone marks waves.
+- Trip planner should answer season/skill/vibe/travel questions and suggest soft longboard destinations/clusters.
+- Do not turn this into Surfline, social media, or a generic travel booking site.
+
 
 ## Quality / vibe
 
