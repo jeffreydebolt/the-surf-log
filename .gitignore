@@ -1,0 +1,20 @@
+# Local/runtime files
+.DS_Store
+.env
+.env.*
+node_modules/
+dist/
+build/
+.cache/
+
+# Raw/scraped/generated inputs
+raw/
+scrapes/
+*.sqlite
+*.db
+*.csv
+*.xlsx
+*.xls
+
+# Keep generated site output out unless intentionally deploying it
+public/build/
