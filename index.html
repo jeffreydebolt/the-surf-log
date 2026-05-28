@@ -32,7 +32,7 @@
       </div>
       <aside class="log-card" aria-label="Example log card">
         <span class="card-kicker">Current note</span>
-        <h2>Perfect little peelers, collected.</h2>
+        <h2>Soft longboard waves, collected.</h2>
         <p>This is for waist-high runners, friendly points, soft shoulders, long trims, and the slow-travel dream list.</p>
         <div class="mini-stats">
           <span><strong id="wave-count">—</strong> waves seeded</span>
@@ -77,10 +77,25 @@
     <section class="submit" id="submit-wave">
       <div>
         <p class="eyebrow">Know one?</p>
-        <h2>Suggest a wave for the log.</h2>
-        <p>For now, send the name, region, and why it belongs. Public/famous waves only — no secret-spot precision.</p>
+        <h2>Add a wave to the log.</h2>
+        <p>Drop in a public/famous longboard wave and why it belongs. No secret-spot precision — general region is enough.</p>
       </div>
-      <a class="button primary" href="mailto:hello@thesurflog.com?subject=Wave%20suggestion%20for%20The%20Surf%20Log">Email a suggestion</a>
+      <form id="wave-form" class="wave-form">
+        <label>
+          <span>Wave name</span>
+          <input name="name" required placeholder="e.g. Queens" />
+        </label>
+        <label>
+          <span>Region</span>
+          <input name="region" required placeholder="e.g. Waikiki, Hawaii" />
+        </label>
+        <label>
+          <span>Why it belongs</span>
+          <textarea name="why" required placeholder="Soft runner, friendly wall, long glide…"></textarea>
+        </label>
+        <button class="button primary" type="submit">Add to my draft list</button>
+        <p id="form-note" class="form-note" aria-live="polite">Draft suggestions save in this browser for now.</p>
+      </form>
     </section>
   </main>
 

@@ -6,7 +6,8 @@ const state = {
   skill: '',
   showWant: false,
   showHit: false,
-  checklist: JSON.parse(localStorage.getItem('surfLogChecklist') || '{}')
+  checklist: JSON.parse(localStorage.getItem('surfLogChecklist') || '{}'),
+  submissions: JSON.parse(localStorage.getItem('surfLogSubmissions') || '[]')
 };
 
 const els = {
@@ -18,7 +19,9 @@ const els = {
   showWant: document.querySelector('#show-want'),
   showHit: document.querySelector('#show-hit'),
   waveCount: document.querySelector('#wave-count'),
-  regionCount: document.querySelector('#region-count')
+  regionCount: document.querySelector('#region-count'),
+  waveForm: document.querySelector('#wave-form'),
+  formNote: document.querySelector('#form-note')
 };
 
 function saveChecklist() {
@@ -65,20 +68,25 @@ function matches(wave) {
     (!state.showHit || check.hit);
 }
 
+function allWaves() {
+  return [...state.submissions, ...state.waves];
+}
+
 function renderFilters() {
-  const regions = [...new Set(state.waves.map(w => w.region).filter(Boolean))].sort();
+  const regions = [...new Set(allWaves().map(w => w.region).filter(Boolean))].sort();
   const skills = [...new Set(state.waves.map(w => w.skillLevel).filter(Boolean))].sort();
   els.region.innerHTML = '<option value="">All regions</option>' + regions.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
   els.skill.innerHTML = '<option value="">All skill levels</option>' + skills.map(s => `<option value="${escapeHtml(s.toLowerCase())}">${escapeHtml(s)}</option>`).join('');
-  els.waveCount.textContent = state.waves.length;
+  els.waveCount.textContent = allWaves().length;
   els.regionCount.textContent = regions.length;
 }
 
 function render() {
-  const visible = state.waves.filter(matches);
+  const waves = allWaves();
+  const visible = waves.filter(matches);
   els.showWant.setAttribute('aria-pressed', String(state.showWant));
   els.showHit.setAttribute('aria-pressed', String(state.showHit));
-  els.summary.textContent = `${visible.length} of ${state.waves.length} waves shown`;
+  els.summary.textContent = `${visible.length} of ${waves.length} waves shown`;
   if (!visible.length) {
     els.grid.innerHTML = '<div class="empty">No waves match that filter yet.</div>';
     return;
@@ -132,6 +140,34 @@ els.region.addEventListener('change', event => { state.region = event.target.val
 els.skill.addEventListener('change', event => { state.skill = event.target.value; render(); });
 els.showWant.addEventListener('click', () => { state.showWant = !state.showWant; render(); });
 els.showHit.addEventListener('click', () => { state.showHit = !state.showHit; render(); });
+els.waveForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const form = new FormData(event.currentTarget);
+  const name = String(form.get('name') || '').trim();
+  const region = String(form.get('region') || '').trim();
+  const why = String(form.get('why') || '').trim();
+  if (!name || !region || !why) return;
+  const id = `draft-${Date.now()}`;
+  state.submissions.unshift({
+    id,
+    name,
+    location: region,
+    region,
+    country: 'Draft',
+    breakType: 'submitted wave',
+    direction: '',
+    bestSeason: 'Needs research',
+    skillLevel: 'Needs review',
+    skillNotes: 'Draft user submission saved locally.',
+    whyItBelongs: why,
+    tags: ['draft', 'submitted']
+  });
+  localStorage.setItem('surfLogSubmissions', JSON.stringify(state.submissions));
+  event.currentTarget.reset();
+  renderFilters();
+  render();
+  els.formNote.textContent = `Added “${name}” to your draft list in this browser.`;
+});
 document.querySelector('[data-action="scroll-submit"]').addEventListener('click', () => {
   document.querySelector('#submit-wave').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
