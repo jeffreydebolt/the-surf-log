@@ -15,10 +15,31 @@
   "skillLevel": "beginner-friendly to intermediate",
   "skillNotes": "Classic mellow longboard zone...",
   "whyItBelongs": "One of California’s defining longboard waves...",
+  "lat": 33.372,
+  "lng": -117.568,
+  "coordinatePrecision": "public-break-approx",
+  "mapNote": "Approximate public break area, not secret-spot precision",
   "tags": ["classic", "soft peeler", "log-friendly"],
   "sources": []
 }
 ```
+
+## Map fields
+
+Map coordinates are for a travel pin-map feeling, not navigation-grade surf guidance.
+
+Required once map view exists:
+
+- `lat` — decimal latitude
+- `lng` — decimal longitude
+- `coordinatePrecision` — one of the values below
+- `mapNote` — short caveat if location is generalized
+
+### Coordinate precision
+
+- `public-break-approx` — famous/public break; approximate public coordinate is acceptable.
+- `town-or-region` — use town/region center where exact break pin would be too specific or not useful.
+- `hidden-unmapped` — keep wave in list but do not show a precise map pin.
 
 ## Enum targets
 
@@ -65,9 +86,16 @@ Tags should support discovery and taste, not just taxonomy:
 - right point
 - beachbreak
 - cobblestone
+- travel-dream
+- long left
+- long right
+- warm water
+- classic longboard
 
 ## Source caution
 
 The current seed data is a draft research pass. It should be treated as useful starting material, not sacred truth.
 
 Before public confidence ratings or guide language, add source URLs and/or local surfer confirmation per wave.
+
+Do not add secret-spot precision. If a wave is not clearly public/famous, use `town-or-region` or `hidden-unmapped` instead of a precise pin.
