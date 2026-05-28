@@ -1,42 +1,58 @@
-# Perfect Little Peelers
+# The Surf Log
 
-A lightweight dream list and personal checklist for soft longboard waves worth traveling for.
+A lifetime glide list for soft longboard waves worth traveling for.
 
 Not Surfline. Not a forecast app. Not performance surfing.
 
-Perfect Little Peelers is for people who still love waist-high runners, soft points, clean little walls, and the kind of wave you remember because it let you glide.
+The Surf Log is for people who still love waist-high runners, soft points, clean little walls, and the kind of wave you remember because it let you glide.
 
-## Working one-liners
+## V1
 
-- A lifetime glide list for soft waves worth traveling for.
-- Not a forecast app. A checklist for the waves you’ll remember.
-- The world’s best little longboard waves, collected.
-- A dream list for people who still love waist-high peelers.
-
-## V1 shape
-
-Start small and static:
+Static first:
 
 - searchable wave list
-- region / country / break type / skill filters
+- region / skill filters
 - wave cards with why-it-belongs notes
 - local checklist state: `want to hit` / `hit it`
-- fake or lightweight submit-a-wave CTA
+- lightweight submit-a-wave email CTA
 
 No backend until the checklist proves people care.
+
+## Local preview
+
+```bash
+python3 -m http.server 4177
+# open http://127.0.0.1:4177
+```
+
+## Deploy recommendation
+
+Use **Cloudflare Pages** for `thesurflog.com`.
+
+Why: free static hosting, no app server to sleep/timeout, automatic SSL, private GitHub repo support, and simple DNS if the domain uses Cloudflare nameservers.
+
+Cloudflare Pages settings:
+
+- Framework preset: `None`
+- Build command: leave blank
+- Build output directory: `/`
+- Production branch: `main`
+
+See `docs/deploy-cloudflare-pages.md` for DNS steps.
 
 ## Repository map
 
 ```text
-data/
-  waves.seed.json          Draft seed data from research pass 1
-
-docs/
-  product-brief.md         Concept, vibe, features, constraints
-  build-plan.md            V1 build checklist
-  data-model.md            Wave-card fields and enum notes
-  shipping-hygiene.md      GitHub / ShipRank cleanliness rules
-  source-plan.md           Existing planning notes copied from local source
+index.html                  Static V1 app
+assets/styles.css           Site styles
+assets/app.js               Search/filter/checklist behavior
+data/waves.seed.json        Draft seed data from research pass 1
+docs/product-brief.md       Concept, vibe, features, constraints
+docs/build-plan.md          V1 build checklist
+docs/deploy-cloudflare-pages.md DNS/deploy instructions
+docs/data-model.md          Wave-card fields and enum notes
+docs/shipping-hygiene.md    GitHub / ShipRank cleanliness rules
+docs/source-plan.md         Existing planning notes copied from local source
 ```
 
 ## Shipping rule
