@@ -87,6 +87,27 @@ h2 { font-size: clamp(32px, 4.6vw, 62px); }
 .mini-stats strong { display: block; color: var(--ink); font-size: 28px; }
 main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 80px; }
 .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 34px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: #33413b; }
+.photo-break {
+  margin: 0 0 42px;
+  border-radius: 34px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--foam);
+  box-shadow: var(--shadow);
+}
+.photo-break img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+.photo-break figcaption {
+  margin: 0;
+  padding: 12px 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
 .toolbar {
   position: sticky;
   top: 0;
