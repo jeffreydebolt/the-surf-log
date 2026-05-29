@@ -1,0 +1,21 @@
+name: Wave submission PR
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  create-pr:
+    if: contains(github.event.issue.labels.*.name, 'wave-submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create wave review PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/create_wave_pr.py
