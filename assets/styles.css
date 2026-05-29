@@ -116,20 +116,20 @@ main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 8
 .polaroid-back {
   inset: 8% 20% auto auto;
   width: min(230px, 40vw);
-  height: min(284px, 50vw);
+  height: min(278px, 48.5vw);
   border-radius: 4px;
   overflow: hidden;
 }
 .polaroid-back::before {
   content: "";
   position: absolute;
-  inset: 12px 12px 70px;
+  inset: 14px 14px 64px;
   background:
     linear-gradient(180deg, rgba(9, 68, 92, .1), rgba(232, 223, 199, .24)),
     url("images/hawaiian-surfer-web.jpg") center / cover;
   border-radius: 2px;
   box-shadow: inset 0 0 18px rgba(24, 35, 31, .22);
-  filter: saturate(1.05) contrast(.88) brightness(1.08) sepia(.1);
+  filter: blur(.35px) saturate(.78) contrast(.76) brightness(1.13) sepia(.14);
 }
 .polaroid-back::after {
   content: "";
@@ -145,13 +145,13 @@ main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 8
 .back-one { transform: rotate(-8deg) translate(-64px, 36px); }
 .back-one::before { background-position: 36% 46%; }
 .back-two { transform: rotate(4deg) translate(18px, 44px); background: #f7f0dc; }
-.back-two::before { background-position: 58% 54%; filter: saturate(.92) contrast(.84) brightness(1.12) sepia(.16); }
+.back-two::before { background-position: 58% 54%; filter: blur(.35px) saturate(.72) contrast(.74) brightness(1.16) sepia(.18); }
 .back-three { transform: rotate(9deg) translate(54px, 72px); background: #eee6d0; }
-.back-three::before { background-position: 72% 48%; filter: saturate(.86) contrast(.82) brightness(1.16) sepia(.2); }
+.back-three::before { background-position: 72% 48%; filter: blur(.35px) saturate(.68) contrast(.72) brightness(1.18) sepia(.22); }
 .polaroid-front {
   inset: 0 auto auto 50%;
   width: min(300px, 72vw);
-  padding: 12px 12px 72px;
+  padding: 18px 18px 82px;
   border-radius: 5px;
   transform: translateX(-50%) rotate(-1.4deg);
   z-index: 1;
@@ -172,9 +172,10 @@ main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 8
     linear-gradient(90deg, rgba(24, 35, 31, .04), transparent 12%, transparent 88%, rgba(24, 35, 31, .05));
 }
 .polaroid-front::after {
-  opacity: .34;
+  opacity: .46;
   background:
-    repeating-linear-gradient(18deg, rgba(24, 35, 31, .035) 0 1px, transparent 1px 7px),
+    linear-gradient(180deg, rgba(255, 252, 238, .42), rgba(255, 252, 238, .18)),
+    repeating-linear-gradient(18deg, rgba(24, 35, 31, .04) 0 1px, transparent 1px 7px),
     radial-gradient(circle at 8% 93%, rgba(132, 91, 61, .18) 0 2px, transparent 4px),
     radial-gradient(circle at 95% 42%, rgba(24, 35, 31, .13) 0 1px, transparent 3px);
 }
@@ -186,7 +187,7 @@ main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 8
   object-position: 49% 52%;
   border-radius: 2px;
   box-shadow: inset 0 0 22px rgba(24, 35, 31, .22);
-  filter: saturate(1.18) contrast(.94) brightness(1.08) sepia(.08);
+  filter: blur(.45px) saturate(.78) contrast(.76) brightness(1.14) sepia(.12);
 }
 .photo-break figcaption {
   max-width: 660px;
@@ -321,9 +322,9 @@ footer p { margin: 0; }
   .log-card { padding: 22px; }
   h1 { font-size: clamp(48px, 16vw, 74px); }
   .polaroid-stack { min-height: 380px; }
-  .polaroid-front { width: 72vw; padding: 10px 10px 62px; }
-  .polaroid-back { width: 54vw; height: 66vw; }
-  .polaroid-back::before { inset: 10px 10px 58px; }
+  .polaroid-front { width: 72vw; padding: 14px 14px 72px; }
+  .polaroid-back { width: 54vw; height: 65vw; }
+  .polaroid-back::before { inset: 12px 12px 54px; }
   .back-one { transform: rotate(-8deg) translate(-34px, 32px); }
   .back-two { transform: rotate(4deg) translate(14px, 42px); }
   .back-three { transform: rotate(9deg) translate(34px, 66px); }
