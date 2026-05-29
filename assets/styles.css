@@ -114,23 +114,40 @@ main { max-width: 1120px; margin: 0 auto; padding: 52px clamp(18px, 4vw, 28px) 8
     0 16px 34px rgba(24, 35, 31, .16);
 }
 .polaroid-back {
-  inset: 8% 17% auto auto;
-  width: min(255px, 44vw);
-  height: min(350px, 61vw);
+  inset: 9% 20% auto auto;
+  width: min(244px, 42vw);
+  height: min(334px, 58vw);
   border-radius: 4px;
+  overflow: hidden;
 }
 .polaroid-back::before {
   content: "";
   position: absolute;
-  inset: 22px 20px 92px;
+  inset: 22px 20px 94px;
   background:
-    linear-gradient(180deg, #0f5988 0%, #8ec7bd 44%, #eadfc5 100%);
+    linear-gradient(180deg, rgba(9, 68, 92, .1), rgba(232, 223, 199, .24)),
+    url("images/hawaiian-surfer-web.jpg") center / cover;
   border-radius: 2px;
   box-shadow: inset 0 0 18px rgba(24, 35, 31, .22);
+  filter: saturate(1.05) contrast(.88) brightness(1.08) sepia(.1);
 }
-.back-one { transform: rotate(-8deg) translate(-88px, 38px); }
-.back-two { transform: rotate(4deg) translate(20px, 48px); background: #f7f0dc; }
-.back-three { transform: rotate(10deg) translate(86px, 86px); background: #eee6d0; }
+.polaroid-back::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(20deg, rgba(24, 35, 31, .035) 0 1px, transparent 1px 8px),
+    radial-gradient(circle at 12% 88%, rgba(132, 91, 61, .13) 0 2px, transparent 4px),
+    linear-gradient(90deg, rgba(24, 35, 31, .04), transparent 18%, transparent 82%, rgba(24, 35, 31, .04));
+  mix-blend-mode: multiply;
+}
+.back-one { transform: rotate(-8deg) translate(-72px, 46px); }
+.back-one::before { background-position: 36% 46%; }
+.back-two { transform: rotate(4deg) translate(22px, 56px); background: #f7f0dc; }
+.back-two::before { background-position: 58% 54%; filter: saturate(.92) contrast(.84) brightness(1.12) sepia(.16); }
+.back-three { transform: rotate(10deg) translate(68px, 92px); background: #eee6d0; }
+.back-three::before { background-position: 72% 48%; filter: saturate(.86) contrast(.82) brightness(1.16) sepia(.2); }
 .polaroid-front {
   inset: 0 auto auto 50%;
   width: min(340px, 74vw);
@@ -305,10 +322,10 @@ footer p { margin: 0; }
   h1 { font-size: clamp(48px, 16vw, 74px); }
   .polaroid-stack { min-height: 440px; }
   .polaroid-front { width: 78vw; padding: 30px 24px 96px; }
-  .polaroid-back { width: 58vw; height: 78vw; }
-  .back-one { transform: rotate(-8deg) translate(-48px, 36px); }
-  .back-two { transform: rotate(4deg) translate(18px, 54px); }
-  .back-three { transform: rotate(10deg) translate(48px, 88px); }
+  .polaroid-back { width: 56vw; height: 76vw; }
+  .back-one { transform: rotate(-8deg) translate(-38px, 44px); }
+  .back-two { transform: rotate(4deg) translate(16px, 58px); }
+  .back-three { transform: rotate(10deg) translate(38px, 92px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
