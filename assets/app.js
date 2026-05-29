@@ -6,8 +6,7 @@ const state = {
   skill: '',
   showWant: false,
   showHit: false,
-  checklist: JSON.parse(localStorage.getItem('surfLogChecklist') || '{}'),
-  submissions: JSON.parse(localStorage.getItem('surfLogSubmissions') || '[]')
+  checklist: JSON.parse(localStorage.getItem('surfLogChecklist') || '{}')
 };
 
 const els = {
@@ -69,7 +68,7 @@ function matches(wave) {
 }
 
 function allWaves() {
-  return [...state.submissions, ...state.waves];
+  return state.waves;
 }
 
 function renderFilters() {
@@ -135,6 +134,17 @@ async function init() {
   render();
 }
 
+function buildWaveSubmissionUrl({ name, region, why }) {
+  const title = `Wave suggestion: ${name}`;
+  const body = `## Wave name\n${name}\n\n## General region / country\n${region}\n\n## Why it belongs\n${why}\n\n## Best season / window if known\n\n\n## Anything to watch out for\n\n\n## Public source or reference, if any\n\n`;
+  const params = new URLSearchParams({
+    title,
+    labels: 'wave-submission',
+    body
+  });
+  return `https://github.com/jeffreydebolt/the-surf-log/issues/new?${params.toString()}`;
+}
+
 els.search.addEventListener('input', event => { state.query = normalized(event.target.value); render(); });
 els.region.addEventListener('change', event => { state.region = event.target.value; render(); });
 els.skill.addEventListener('change', event => { state.skill = event.target.value; render(); });
@@ -147,26 +157,9 @@ els.waveForm.addEventListener('submit', event => {
   const region = String(form.get('region') || '').trim();
   const why = String(form.get('why') || '').trim();
   if (!name || !region || !why) return;
-  const id = `draft-${Date.now()}`;
-  state.submissions.unshift({
-    id,
-    name,
-    location: region,
-    region,
-    country: 'Draft',
-    breakType: 'submitted wave',
-    direction: '',
-    bestSeason: 'Needs research',
-    skillLevel: 'Needs review',
-    skillNotes: 'Draft user submission saved locally.',
-    whyItBelongs: why,
-    tags: ['draft', 'submitted']
-  });
-  localStorage.setItem('surfLogSubmissions', JSON.stringify(state.submissions));
-  event.currentTarget.reset();
-  renderFilters();
-  render();
-  els.formNote.textContent = `Added “${name}” to your draft list in this browser.`;
+  const url = buildWaveSubmissionUrl({ name, region, why });
+  els.formNote.textContent = `Opening the review submission for “${name}”…`;
+  window.open(url, '_blank', 'noopener,noreferrer');
 });
 document.querySelector('[data-action="scroll-submit"]').addEventListener('click', () => {
   document.querySelector('#submit-wave').scrollIntoView({ behavior: 'smooth', block: 'start' });
