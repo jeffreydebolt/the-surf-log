@@ -8,6 +8,7 @@
   <meta property="og:title" content="The Surf Log" />
   <meta property="og:description" content="A lifetime glide list for soft longboard waves worth traveling for." />
   <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -84,6 +85,14 @@
         <h2>Soft waves, long lines, worth planning around.</h2>
       </div>
       <div id="results-summary" class="results-summary" aria-live="polite"></div>
+      <div class="view-toggle" role="group" aria-label="Choose wave view">
+        <button id="view-list" class="view-button active" type="button" aria-pressed="true">List</button>
+        <button id="view-map" class="view-button" type="button" aria-pressed="false">Map</button>
+      </div>
+      <div id="map-panel" class="map-panel" hidden>
+        <div id="wave-map" class="wave-map" aria-label="Map of public Surf Log waves with approximate pins"></div>
+        <p class="map-note">Pins are approximate public or town-level locations for trip dreaming — not navigation-grade surf guidance.</p>
+      </div>
       <div id="wave-grid" class="wave-grid"></div>
     </section>
 
@@ -128,6 +137,7 @@
     <p class="muted">Skill labels are general notes, not live safety advice. Check conditions, respect locals, and know your limits.</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

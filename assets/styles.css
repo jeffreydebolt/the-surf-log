@@ -237,7 +237,71 @@ input, select {
 .filter-pill[aria-pressed="true"] { background: var(--sun); color: #fffaf4; border-color: var(--sun); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 14px; }
 .section-heading h2 { max-width: 760px; }
-.results-summary { color: var(--muted); margin: 0 0 20px; }
+.results-summary { color: var(--muted); margin: 0 0 14px; }
+.view-toggle {
+  display: inline-flex;
+  gap: 6px;
+  padding: 5px;
+  margin: 0 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,252,245,.74);
+}
+.view-button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 850;
+  cursor: pointer;
+}
+.view-button.active { background: var(--kelp); color: var(--foam); }
+.map-panel {
+  margin: 0 0 24px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255,252,245,.82);
+  box-shadow: 0 12px 38px rgba(24, 35, 31, .07);
+}
+.wave-map {
+  height: clamp(360px, 58vh, 620px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #dbe6df;
+}
+.map-note {
+  margin: 10px 4px 2px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.surf-pin {
+  background: transparent;
+  border: 0;
+}
+.surf-pin span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid var(--foam);
+  border-radius: 999px 999px 999px 3px;
+  transform: rotate(-45deg);
+  box-shadow: 0 8px 20px rgba(24, 35, 31, .28);
+}
+.surf-pin-default span { background: var(--sea); }
+.surf-pin-want span { background: var(--sun); }
+.surf-pin-hit span { background: #4e7d55; }
+.map-popup { max-width: 260px; }
+.map-popup h3 { margin: 2px 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: 22px; line-height: 1; }
+.map-popup p { margin: 0 0 10px; color: #425048; line-height: 1.35; }
+.popup-kicker { color: var(--sea) !important; font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .1em; }
+.popup-note { color: var(--muted) !important; font-size: 12px; }
+.popup-actions { margin-top: 10px; }
+.popup-actions button { color: var(--muted); background: var(--foam); }
+.popup-actions button.active { color: var(--foam); background: var(--kelp); }
 .wave-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .wave-card {
   display: flex;
