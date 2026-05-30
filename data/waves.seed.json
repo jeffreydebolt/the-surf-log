@@ -5,7 +5,9 @@
     "location": "California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/San-Onofre"
+    ],
     "breakType": "beach-and-point / cobblestone reef peaks",
     "direction": "rights and lefts; soft, slow, slopey",
     "bestSeason": "summer–fall for longboard-friendly S/SW swells; winter can be cleaner/consistent",
@@ -28,7 +30,9 @@
     "location": "California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Malibu_1"
+    ],
     "breakType": "right-hand point break",
     "direction": "long right",
     "bestSeason": "summer–early fall S/SW swells",
@@ -51,7 +55,9 @@
     "location": "California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Rincon-Point"
+    ],
     "breakType": "right-hand point break",
     "direction": "long right",
     "bestSeason": "winter W/NW swells",
@@ -73,7 +79,9 @@
     "location": "California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Cardiff-Reef"
+    ],
     "breakType": "reef break",
     "direction": "primarily lefts with rights available",
     "bestSeason": "winter W/NW swells",
@@ -95,7 +103,10 @@
     "location": "Santa Cruz, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Pleasure-Point-Second-Peak",
+      "https://www.surf-forecast.com/breaks/Cowells-Cove"
+    ],
     "breakType": "reef/point setup; Cowells is a sheltered soft point",
     "direction": "mostly rights at Pleasure Point; Cowells has soft rights/inside rollers",
     "bestSeason": "fall–winter; Cowells best when enough west swell wraps in",
@@ -117,7 +128,9 @@
     "location": "San Clemente / Trestles area, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Church"
+    ],
     "breakType": "beach-and-point / cobblestone reef",
     "direction": "rights and lefts",
     "bestSeason": "summer–fall S/SW swells",
@@ -139,7 +152,10 @@
     "location": "Ventura, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Ventura-Overhead",
+      "https://www.surf-forecast.com/breaks/San-Buenaventura-State-Beach"
+    ],
     "breakType": "point/reef and cobblestone-style point setup",
     "direction": "mostly rights",
     "bestSeason": "winter W/NW swells",
@@ -161,7 +177,9 @@
     "location": "Newport Beach, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Blackies"
+    ],
     "breakType": "beach-and-point / pier-influenced beachbreak",
     "direction": "mostly lefts with point influence; mixed peaks depending sand",
     "bestSeason": "winter W swells",
@@ -183,7 +201,9 @@
     "location": "Encinitas, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Swamis"
+    ],
     "breakType": "beach-and-reef / right reef",
     "direction": "right",
     "bestSeason": "winter W swells",
@@ -205,7 +225,9 @@
     "location": "Dana Point, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Doheney-Beach"
+    ],
     "breakType": "reef / cobblestone-soft point style",
     "direction": "right-hand reef",
     "bestSeason": "summer–early fall S/SW swells",
@@ -227,7 +249,9 @@
     "location": "San Diego, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Tourmaline"
+    ],
     "breakType": "soft reef / beachbreak mix",
     "direction": "rights and lefts",
     "bestSeason": "summer–fall S/SW swells; winter can be consistent",
@@ -249,7 +273,9 @@
     "location": "near Ventura, California",
     "country": "USA",
     "region": "California",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Mondos"
+    ],
     "breakType": "sandbar / soft point-like beach setup",
     "direction": "mostly soft rights/lefts depending sandbar",
     "bestSeason": "winter W swells",
@@ -271,7 +297,10 @@
     "location": "North Carolina",
     "country": "USA",
     "region": "North Carolina",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Kitty-Hawk-Pier",
+      "https://www.surfing-waves.com/atlas/north_america/usa/east_coast/north_carolina.html"
+    ],
     "breakType": "exposed beach / pier break",
     "direction": "lefts and rights",
     "bestSeason": "summer for consistency; fall for cleaner tropical/groundswell windows",
@@ -339,7 +368,10 @@
     "location": "North Carolina",
     "country": "USA",
     "region": "North Carolina",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/S-Turns/forecasts/latest/six_day",
+      "https://www.surfing-waves.com/atlas/north_america/usa/east_coast/north_carolina.html"
+    ],
     "breakType": "exposed beachbreak / sandbar",
     "direction": "lefts and rights",
     "bestSeason": "fall–winter; clean hurricane swell windows",
@@ -430,7 +462,10 @@
     "location": "North Carolina",
     "country": "USA",
     "region": "North Carolina",
-    "sources": [],
+    "sources": [
+      "https://www.surf-forecast.com/breaks/Wrightsville-Beach",
+      "https://www.surfing-waves.com/atlas/north_america/usa/east_coast/north_carolina.html"
+    ],
     "breakType": "beachbreak with pier/sandbar influence",
     "direction": "mixed peaks; often lefts/rights depending bar",
     "bestSeason": "winter and fall",
@@ -498,7 +533,9 @@
     "location": "South Carolina",
     "country": "USA",
     "region": "South Carolina",
-    "sources": [],
+    "sources": [
+      "https://www.surfing-waves.com/atlas/north_america/usa/east_coast/south_carolina.html"
+    ],
     "breakType": "beachbreak",
     "direction": "lefts and rights",
     "bestSeason": "fall–winter; tropical season can produce quality windows",
@@ -520,7 +557,9 @@
     "location": "Florida",
     "country": "USA",
     "region": "Florida",
-    "sources": [],
+    "sources": [
+      "https://www.surfing-waves.com/atlas/north_america/usa/east_coast/florida.html"
+    ],
     "breakType": "beach / pier sandbar break",
     "direction": "lefts and rights",
     "bestSeason": "winter and hurricane season; summer often small but longboardable",
