@@ -22,7 +22,11 @@
       "log-friendly",
       "cobblestone",
       "beginner-friendly"
-    ]
+    ],
+    "lat": 33.372,
+    "lng": -117.568,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public San Onofre / Old Man’s / Dogpatch area; not navigation-grade surf guidance."
   },
   {
     "id": "malibu-surfrider-california",
@@ -47,7 +51,11 @@
       "localized",
       "pilgrimage",
       "advanced-crowd"
-    ]
+    ],
+    "lat": 34.0331,
+    "lng": -118.6798,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Malibu Surfrider area; not navigation-grade surf guidance."
   },
   {
     "id": "rincon-california",
@@ -71,7 +79,11 @@
       "crowded",
       "localized",
       "performance-longboard"
-    ]
+    ],
+    "lat": 34.3787,
+    "lng": -119.4846,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Rincon Point area; not navigation-grade surf guidance."
   },
   {
     "id": "cardiff-reef-california",
@@ -95,7 +107,11 @@
       "crowded",
       "rocks",
       "trim wave"
-    ]
+    ],
+    "lat": 33.0127,
+    "lng": -117.2827,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Cardiff Reef area; not navigation-grade surf guidance."
   },
   {
     "id": "pleasure-point-cowells-santa-cruz-california",
@@ -120,7 +136,11 @@
       "reef",
       "crowded",
       "classic longboard"
-    ]
+    ],
+    "lat": 36.9612,
+    "lng": -121.9956,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate Santa Cruz longboard zone covering Pleasure Point/Cowells; not navigation-grade surf guidance."
   },
   {
     "id": "church-san-clemente-trestles-area-california",
@@ -144,7 +164,11 @@
       "intermediate",
       "crowded",
       "longboard-friendly"
-    ]
+    ],
+    "lat": 33.3852,
+    "lng": -117.5938,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Church/Trestles area; not navigation-grade surf guidance."
   },
   {
     "id": "c-street-ventura-california",
@@ -169,7 +193,11 @@
       "crowded",
       "rocks",
       "performance-longboard"
-    ]
+    ],
+    "lat": 34.2751,
+    "lng": -119.293,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public C Street / Ventura Point area; not navigation-grade surf guidance."
   },
   {
     "id": "blackies-newport-beach-california",
@@ -193,7 +221,11 @@
       "beginner-friendly",
       "crowded",
       "winter"
-    ]
+    ],
+    "lat": 33.6097,
+    "lng": -117.9296,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Blackies / Newport Pier area; not navigation-grade surf guidance."
   },
   {
     "id": "swami-s-encinitas-california",
@@ -217,7 +249,11 @@
       "crowded",
       "localized",
       "advanced-longboard"
-    ]
+    ],
+    "lat": 33.0369,
+    "lng": -117.292,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Swami’s area; not navigation-grade surf guidance."
   },
   {
     "id": "doheny-dana-point-california",
@@ -241,7 +277,11 @@
       "Dana Point",
       "crowded",
       "longboard-school"
-    ]
+    ],
+    "lat": 33.4612,
+    "lng": -117.6876,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Doheny State Beach area; not navigation-grade surf guidance."
   },
   {
     "id": "tourmaline-san-diego-california",
@@ -265,7 +305,11 @@
       "longboard classic",
       "crowded",
       "mellow"
-    ]
+    ],
+    "lat": 32.8059,
+    "lng": -117.2608,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Tourmaline Surf Park area; not navigation-grade surf guidance."
   },
   {
     "id": "mondos-near-ventura-california",
@@ -289,7 +333,11 @@
       "sandbar",
       "winter",
       "mellow"
-    ]
+    ],
+    "lat": 34.331,
+    "lng": -119.41,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Mondos area near Ventura; not navigation-grade surf guidance."
   },
   {
     "id": "kitty-hawk-pier-north-carolina",
@@ -314,7 +362,11 @@
       "beachbreak",
       "longboard",
       "public"
-    ]
+    ],
+    "lat": 36.0646,
+    "lng": -75.7045,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Kitty Hawk Pier area; not navigation-grade surf guidance."
   },
   {
     "id": "jennette-s-pier-nags-head-north-carolina",
@@ -386,7 +438,11 @@
       "beachbreak",
       "peeler",
       "intermediate"
-    ]
+    ],
+    "lat": 35.6008,
+    "lng": -75.4656,
+    "coordinatePrecision": "town-or-region",
+    "mapNote": "General Rodanthe/S-Turns area pin; use region-level map context, not precise surf navigation."
   },
   {
     "id": "avon-pier-north-carolina",
@@ -480,7 +536,11 @@
       "longboard",
       "learner-friendly",
       "crowded"
-    ]
+    ],
+    "lat": 34.2085,
+    "lng": -77.7964,
+    "coordinatePrecision": "town-or-region",
+    "mapNote": "General Wrightsville Beach pier-zone pin; not navigation-grade surf guidance."
   },
   {
     "id": "masonboro-island-masonboro-inlet-north-carolina",
@@ -549,7 +609,11 @@
       "beachbreak",
       "longboard",
       "public"
-    ]
+    ],
+    "lat": 32.6543,
+    "lng": -79.9048,
+    "coordinatePrecision": "town-or-region",
+    "mapNote": "General Folly Beach / Washout area pin; not navigation-grade surf guidance."
   },
   {
     "id": "cocoa-beach-pier-cocoa-beach-florida",
@@ -574,7 +638,11 @@
       "longboard",
       "learner-friendly",
       "East Coast classic"
-    ]
+    ],
+    "lat": 28.3671,
+    "lng": -80.6044,
+    "coordinatePrecision": "public-break-approx",
+    "mapNote": "Approximate public Cocoa Beach Pier area; not navigation-grade surf guidance."
   },
   {
     "id": "waikiki-queens-canoes-oahu-hawaii",
