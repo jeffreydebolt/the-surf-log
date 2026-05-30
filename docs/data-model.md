@@ -99,3 +99,19 @@ The current seed data is a draft research pass. It should be treated as useful s
 Before public confidence ratings or guide language, add source URLs and/or local surfer confirmation per wave.
 
 Do not add secret-spot precision. If a wave is not clearly public/famous, use `town-or-region` or `hidden-unmapped` instead of a precise pin.
+
+## Validation
+
+Run the lightweight seed validator before committing wave data changes:
+
+```bash
+python3 scripts/validate_waves.py
+```
+
+The validator intentionally checks structure and safety rails without forcing premature taxonomy normalization:
+
+- unique lowercase kebab-case `id` values;
+- required public card fields;
+- `sources` and `tags` array shape;
+- optional map fields are internally consistent;
+- `hidden-unmapped` records do not include exact coordinates.

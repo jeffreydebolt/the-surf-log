@@ -1,0 +1,24 @@
+name: Validate wave seed data
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-waves:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate wave seed JSON
+        run: python3 scripts/validate_waves.py
+
+      - name: Compile submission PR helper
+        run: python3 -m py_compile .github/scripts/create_wave_pr.py
